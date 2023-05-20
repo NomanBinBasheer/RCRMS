@@ -1,19 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import LogoutHeader from '../components/LogoutHeader'
 import StudentDetailsContainer from '../components/StudentDetailsContainer'
 import UserDetailsBar from "../components/UserDetailsBar"
 import CorrectionRequestPopup from "../components/CorrectionRequestPopup"
-import { CurrentUserContext } from '../App';
+// import { CurrentUserContext } from '../App';
 
-export default function StudentDashboardPage({ switchToLogin }){
-  const currentUser = useContext(CurrentUserContext)
+export default function StudentDashboardPage(){
+  // const [changeResquest, setChangeResquest] = useState(false)
+
+  // const {currentUser} = useContext(CurrentUserContext)
     return(
         <>
           <LogoutHeader 
-            currentUser= {currentUser}
           />
           <UserDetailsBar 
-            currentUser={currentUser}
           />
           <h2 className="changeResquest">Change Requests</h2>
           <StudentDetailsContainer />

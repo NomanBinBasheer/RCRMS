@@ -1,11 +1,14 @@
-import React from "react"
+import React, { useContext } from "react"
 import { usersDB } from '../db.js'
+import { CurrentUserContext } from '../App';
+
 
 export default function UserDetailsBar(){
+  const currentUser = useContext(CurrentUserContext)
       
     return(
         <>
-        <section className={`userDetailsBar`}>
+        <section className={`userDetailsBar ${currentUser.isAdmin ? "greenAdmin" : "blueStudent"}`}>
            <ul>
              {
                 
