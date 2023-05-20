@@ -1,0 +1,347 @@
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  /* padding: 2rem; */
+  /* text-align: center; */
+}
+
+html{
+  font-size: 62.5%;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fafafa; 
+}
+
+/* ////////////////////////////////// */
+/*                Login Page          */
+/* ////////////////////////////////// */
+
+.loginMain{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginContainer{
+   width: 500px;
+   height: 500px;
+   background: #ffffff;
+   border-radius: 25px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   box-shadow: 0 1px 10px 3px rgba(189, 189, 189, 0.651);
+}
+.loginContainer h1{
+  font-weight: 800;
+  font-size: 3.5rem;
+  margin: 1rem;
+  text-align: center;
+}
+.loginContainer h2{
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: #8e8e8e;
+  margin: 4rem 0 0 0;
+}
+.rsrmsSpan{
+  font-size: 1.7rem;
+}
+.loginFormContainer{
+   width: 90%;
+   height: 200px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin: auto;
+}
+.loginFormContainer span{
+  font-size: 1.4rem;
+  text-align: left;
+  text-indent: 10px;
+  color: rgb(116, 116, 116);
+}
+.loginFormContainer input{
+  padding: 0.9rem;
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 5px;
+  margin-bottom: 18px;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.loginFormContainer input::placeholder {
+  font-size: 1.4rem;
+  color: rgb(175, 175, 175);
+}
+.loginButton{
+  padding: 1rem;
+  border: none;
+  color: #007a39;
+  border-radius: 5px;
+  background:  #ddede5;
+  margin-top: auto;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.loginButton:hover{
+  color: #ddede5;
+  background: #007a39;
+}
+
+
+/* /////////////////////////////////////// */
+/*            Student Dashboard Page       */
+/* /////////////////////////////////////// */
+
+.logoutHeader{
+  display: flex;
+  padding: 0 4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.logoutContainer{
+  display: flex;
+  align-items: center;
+}
+.logoutButton{
+   border: none;
+   padding: 0.6rem 3.5rem;
+   border-radius: 0.4rem;
+   font-family: 'Poppins', sans-serif;
+   cursor: pointer;
+   color: white;
+   /* background: #05386b; */
+}
+.bellIcon{
+  font-size: 1.7em;
+  cursor: pointer;
+  color: #05386b;
+  margin-right: 2rem;
+}
+.blueStudent{
+  background: #05386b;
+}
+.greenAdmin{
+  background: #389764;
+}
+.blueBellIcon{
+    color: #05386b;
+}
+.greenBellIcon{
+    color: #389764;
+}
+.userDetailsBar{
+  color: white;
+  /* margin: 0; */
+  padding: 1.4rem 1rem;
+}
+.userDetailsBar ul{
+  margin: 0;
+  display: flex;
+  list-style: none;
+  
+}
+.userDetailsBar li{
+   margin-right: 5rem;
+   font-size: 1.2rem;
+   font-weight: 300;
+}
+.userNameBold{
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.changeResquest{
+  text-align: left;
+  margin-left: 6rem;
+  font-size: 2.7rem;
+  margin-bottom: 1.8rem;
+}
+.studentDetailsContainer{
+ font-size: 1.3rem;
+ margin: 0 auto;
+ padding: 1rem;
+ background: #FFFFFF;
+ width: 94%;
+ border-radius: 2rem;
+ box-shadow: 0 1px 10px 3px rgba(189, 189, 189, 0.651);
+ min-height: max-content;
+ /* display: grid;
+ grid-template-columns: repeat(8, 1fr);
+ gap: 10px; */
+
+}
+.studentDetailsContainer ul{
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   justify-content: space-between;
+   border-bottom:  1px solid rgba(142, 142, 142, 0.3);
+   /* text-align: center; */
+}
+.studentDetailsContainer ul li{
+  width: 10%;
+  /* background: yellow; */
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  /* flex-grow: 0.2; */
+  /* justify-content: baseline; */
+}
+#biggerflex{
+  flex-grow: 2;
+  /* background: orangered; */
+}
+.downloadButton{
+  color: #389764;
+  margin-left: 1rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.remarks{
+  width: 11rem;
+  border-radius: 1rem;
+  padding: 0.2rem 0.8rem;
+  text-align: center;
+  background: #FFBB33;
+  color: white;
+  font-size: 1.1rem; 
+}
+.verticalDots{
+  font-size: 1.5rem;
+  font-weight: 800;
+  width: 2.2rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  margin: 0 1rem 0 auto;
+  cursor: pointer;
+  /* background: red; */
+}
+
+.changeRequestButtonsContainer{
+  margin: 4rem auto;
+  padding: 1rem;
+  background: #FFFFFF;
+  width: 94%;
+  border-radius: 2rem;
+  box-shadow: 0 1px 9px 3px rgba(189, 189, 189, 0.651);
+}
+
+.changeRequestButtonsContainer h3{
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 1.2rem;
+  text-align: center;
+}
+
+.changeRequestButtonsContainer > div{
+   width: 80%;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-evenly;
+}
+.changeRequestButtonsContainer button{
+   border: none;
+   background: #e5f2eb;
+   color: #007a39;
+   font-size: 1.6rem;
+   width: 31rem;
+   height: 6rem;
+   cursor:pointer;
+   margin: 0 1.5rem;
+   /* padding: 2rem; */
+   border-radius: 0.4rem;
+}
+
+.correctionRequestContainer{
+  margin: 4rem auto;
+  padding: 1rem;
+  width: 94%;
+  border-radius: 2rem;
+  box-shadow: 0 1px 9px 3px rgba(189, 189, 189, 0.651);
+}
+.correctionRequestContainer h3{
+  font-size: 2rem;
+  color: #8E8E8E;
+  font-weight: 300;
+  margin: 1rem;
+}
+.correctionSpan{
+   font-weight: 700;
+   color: black;
+}
+.correctionFormContainer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.correctionFormContainer button{
+  height: 4rem;
+  width: 20%;
+  /* flex-grow: 0.2; */
+  border: none;
+  background: #007A39;
+  border-radius: 0.5rem;
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.correctionFormContainer input{
+  /* padding: 0.9rem; */
+  height: 3.8rem;
+  
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  
+  
+}
+.correctionSpanFlex{
+  display: flex;
+  flex-direction: column;
+  /* flex-grow: 1; */
+  width: 38.5%;
+}
+
+
+.correctionSpanFlex span{
+  font-size: 1.4rem;
+  text-align: left;
+  text-indent: 0.7rem;
+  color: rgb(116, 116, 116);
+}
+.noteAndSubmit{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+.noteAndSubmit p{
+  width: 70%;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+}
+.noteAndSubmit span{
+  font-weight: 800;
+  color: #F48424;
+}
+.noteAndSubmit button{
+  height: 4rem;
+  width: 20.3%;
+  border: none;
+  background: #05386B;
+  border-radius: 0.5rem;
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
