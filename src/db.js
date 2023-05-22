@@ -75,7 +75,7 @@ export const usersDB = [
 
 
 export const requests = [
-  {
+  {       
     _id: '64531ac6e7882e25f24392d9',
     fromUser: {
       _id: '64531596e7882e25f24392c0',
@@ -122,8 +122,8 @@ export const requests = [
       dateOfBirth: '2022-01-25T19:00:00.000Z',
     },
     requestType: 'D.O.B',
-    currentData: '2022-01-25T19:00:00.000Z',
-    correctedData: '2001-01-25T19:00:00.000Z',
+    currentData: '2022-01-25',
+    correctedData: '2001-01-25',
     documents: [
       'square-dp.jpg_1683168061880.jpeg',
       'Moon DP for WhatsApp Profile (6).jpg_1683168061881.jpeg',
@@ -141,8 +141,8 @@ export const requests = [
       dateOfBirth: '2002-01-25T19:00:00.000Z',
     },
     requestType: 'D.O.B',
-    currentData: '2002-01-25T19:00:00.000Z',
-    correctedData: '1998-01-25T19:00:00.000Z',
+    currentData: '2002-01-25',
+    correctedData: '1998-01-25',
     documents: [
       'square-dp.jpg_1683168350035.jpeg',
       'Moon DP for WhatsApp Profile (6).jpg_1683168350035.jpeg',
@@ -189,6 +189,25 @@ export const requests = [
     createdAt: '2023-05-04T01:53:24.621Z',
     __v: 0,
   },
+  {
+    _id: '64531cb2e7882e25f2439312',
+    fromUser: {
+      _id: '64531627e7882e25f24392c6',
+      name: 'Noman Bin Basheer',
+      fatherName: 'Muhammad Basheer',
+      dateOfBirth: '2008-01-25T19:00:00.000Z',
+    },
+    requestType: 'Name',
+    currentData: 'Noman Basheer',
+    correctedData: 'Noman Bin Basheer',
+    documents: [
+      'square-dp.jpg_1683168434250.jpeg',
+      'Moon DP for WhatsApp Profile (6).jpg_1683168434250.jpeg',
+    ],
+    remarks: 'Incomplete Docs',
+    createdAt: '2023-05-04T01:53:24.621Z',
+    __v: 0,
+  }
 ];
 
 export const notifications = [
