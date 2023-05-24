@@ -1,21 +1,34 @@
-// import React from 'react'
-// import {notifications} from '../db.js'
+import React from 'react'
+import {notifications} from '../db.js'
 
 
-// export default function NotificationsPopup(){
+export default function NotificationsPopup(){
 
-//     console.log(notifications)
-//     return(
-//         <div className="notificationsPopupContainer">
-//             {
-//              notifications.map(noti => {
-//                 <div className="notification">
-//                 <div className="notificationsNickname"></div>
-//                  <p>{noti.message}</p>
-//                 </div>
-//              })
+    console.log(notifications)
+    return(
+        <div className="notificationsPopupContainer">
             
-//             } 
-//         </div>
-//     )
-// }
+            <div className="notification">
+                <div className="notificationsNickname">RS</div>
+                 <div className="noti">
+                <h4 className='notiName'>Kaleem Ullah</h4>
+                 <p className='notiPara'>has submitted a new name change request</p>
+                 </div>
+            </div>
+            <div className="notification">
+                <div className="notificationsNickname">RS</div>
+                <div className="noti">
+                <h4 className='notiName'>Kaleem Ullah</h4>
+                 <p className='notiPara'>has submitted a new name change request</p>
+                 </div>
+            </div>
+            <div className="notification">
+                <div className="notificationsNickname">RS</div>
+                 <div className="noti">
+                <h4 className='notiName'>Kaleem Ullah</h4>
+                 <p className='notiPara'>has submitted a new name change request</p>
+                 </div>
+            </div> 
+        </div>
+    )
+}

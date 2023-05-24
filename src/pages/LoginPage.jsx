@@ -16,6 +16,7 @@ export default function LoginPage({ switchToDashboard }){
             setPasswordInput(eventValue)
         }
         // console.log(eventValue)
+        console.log(event.target.className)
      }
     //  console.log(usersDB)
   
@@ -42,13 +43,15 @@ export default function LoginPage({ switchToDashboard }){
            >
             <span className="formSpan">Email</span>
               <input 
+              className="hello"
               type="email" 
               placeholder="Enter Your Email"
               name="emailInput"
               onChange={handleChange}
               />
               <span className="formSpan">Password</span>
-              <input 
+              <input
+              className="hello"
               type="password"  
               placeholder="Enter Your Password"
               name="passwordInput"

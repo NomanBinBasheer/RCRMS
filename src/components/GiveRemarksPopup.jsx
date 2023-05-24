@@ -1,13 +1,13 @@
 import React from 'react'
 
 
-export default function GiveRemarksPopup({handleRemarksClose}){
+export default function GiveRemarksPopup({handleRemarksPopup}){
     return(
         <section className="giveRemarksPopupContainer">
             <div className="closeButtonContainer">
             <button 
             className="closeButton"
-            onClick={handleRemarksClose}
+            onClick={handleRemarksPopup}
             >
             &#10006;
             </button>

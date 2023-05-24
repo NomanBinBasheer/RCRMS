@@ -123,11 +123,57 @@ body{
   cursor: pointer;
   color: #05386b;
   margin-right: 2rem;
+  position: relative;
 }
 
 .notificationsPopupContainer{
-  background: red;
+  width: 400px;
+  min-height: max-content; 
+  padding: 0 2rem; 
+  background: #FFFFFF;
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  z-index: 9999;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 0.8rem;
 }
+
+.notification{
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+.noti{
+  margin-left: 1rem;
+}
+.notiName, .notiPara{
+   margin: 0;
+}
+.notiName{
+  color: #8E8E8E;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.notiPara{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000;
+}
+
+.notificationsNickname{
+  width: 4.5rem;
+  height: 4.5rem;
+  background: #05386B;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+}
+
 .blueStudent{
   background: #05386b;
 }
@@ -230,7 +276,7 @@ body{
   height: 2.35rem;
   border-radius: 50%;
   margin: 0 1rem 0 auto;
-  padding-left: 0.2rem;
+  /* padding-left: 0.2rem; */
   cursor: pointer;
   position: relative;
   display: flex;

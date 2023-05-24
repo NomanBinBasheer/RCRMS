@@ -16,8 +16,8 @@ export default function UserDetailsBar(){
                     ) : (
                       <>
                       <li>Student Name: <span className="userNameBold">{currentUser.name} </span></li>
-                       <li>Father Name: <span className="userNameBold">{currentUser.name} </span></li>
-                       <li>Dath Of Birth: <span className="userNameBold">{currentUser.name} </span></li>
+                       <li>Father Name: <span className="userNameBold">{currentUser.fatherName} </span></li>
+                       <li>Dath Of Birth: <span className="userNameBold">{currentUser.dateOfBirth} </span></li>
                        </>
                     )
              }

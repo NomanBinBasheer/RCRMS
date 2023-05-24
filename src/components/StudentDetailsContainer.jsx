@@ -30,12 +30,13 @@ const toggleThreeDotsPopup = (index) =>{
 }
 
 
-const handleRemarksClose = () => {
-  setRemarksPopup(!remarksPopup)
-}
+// const handleRemarksClose = () => {
+//   setRemarksPopup(!remarksPopup)
+// }
 
 const handleRemarksPopup = () => {
   setRemarksPopup(!remarksPopup)
+  console.log('Closed')
 }
 
 // const handleResubmit = () => {
@@ -66,7 +67,15 @@ const handleRemarksPopup = () => {
             <>
            <ul className="studentDetailsList">
                 <li>57043-F19</li>
-                <li>{request.requestType}</li>
+                <li
+                className={
+                  request.requestType === 'Name' ? "blueRequestType"
+                  : request.requestType === 'Name' ? "blueRequestType"
+                  : "greenRequestType"
+                }
+                >
+                  {request.requestType}
+                </li>
                 <li id="biggerflex">{request.fromUser.name}</li>
                 <li id="biggerflex">{request.fromUser.fatherName}</li>
                 <li id="biggerflex">{request.currentData}</li>
@@ -113,7 +122,7 @@ const handleRemarksPopup = () => {
              {
              (currentUser.isAdmin && remarksPopup) && 
              <GiveRemarksPopup 
-             handleRemarksClose={handleRemarksClose}
+             handleRemarksPopup={handleRemarksPopup}
              
              />}
         </section>
