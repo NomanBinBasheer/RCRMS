@@ -12,43 +12,38 @@ export default function StudentDetailsContainer(){
 
   const {currentUser} = useContext(CurrentUserContext)
 
-// const [threeDotsPopup, setThreeDotsPopup] = useState(false)
-
 const [selectedButtonIndex, setSelectedButtonIndex] = useState(null);
 
 const [remarksPopup, setRemarksPopup] = useState(false) 
 
-// const [currentRemarks, setCurrentRemarks] = useState('')
-
-// const newRemarks =
-
 
 const toggleThreeDotsPopup = (index) =>{
-  // setThreeDotsPopup(prevState => !prevState)
   setSelectedButtonIndex((prevIndex) => (prevIndex === index ? null : index));
 
 }
 
 
-// const handleRemarksClose = () => {
-//   setRemarksPopup(!remarksPopup)
-// }
 
 const handleRemarksPopup = () => {
   setRemarksPopup(!remarksPopup)
-  console.log('Closed')
 }
-
-// const handleResubmit = () => {
-//   requests.forEach(i => {
-    
-//   })
-// }
-
-// console.log(requests[0]._id)
 
     
     return(
+      <>
+      {
+        currentUser.isAdmin &&
+        <section className="filterRequestsContainer">
+          <ul>
+            <li>In Progress</li>
+            <li>Pending</li>
+            <li>Accepted</li>
+            <li>Rejected</li>
+            <li className="greenFilter">All</li>
+          </ul>
+        </section>
+        }
+
         <section className={`studentDetailsContainer ${currentUser.isAdmin && "marginTop"}`}>
            <div className="detailsTitles">
              <ul className="studentDetailsList">
@@ -70,7 +65,7 @@ const handleRemarksPopup = () => {
                 <li
                 className={
                   request.requestType === 'Name' ? "blueRequestType"
-                  : request.requestType === 'Name' ? "blueRequestType"
+                  : request.requestType === 'Father Name' ? "purpleRequestType"
                   : "greenRequestType"
                 }
                 >
@@ -126,5 +121,6 @@ const handleRemarksPopup = () => {
              
              />}
         </section>
+        </>
     )
 }

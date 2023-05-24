@@ -17,7 +17,6 @@ export default function LogoutHeader(){
         setNotificationsPopup(!notificationsPopup)
     }
 
-//    console.log(currentUser)
     return(
         <header className="logoutHeader">
             <h2>Record Change Request Management System (RCRMS)</h2>

@@ -15,10 +15,7 @@ export default function LoginPage({ switchToDashboard }){
         else if(event.target.name === 'passwordInput'){
             setPasswordInput(eventValue)
         }
-        // console.log(eventValue)
-        console.log(event.target.className)
      }
-    //  console.log(usersDB)
   
 
     const handleSubmit = (event) => {

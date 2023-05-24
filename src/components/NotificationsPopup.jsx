@@ -4,7 +4,6 @@ import {notifications} from '../db.js'
 
 export default function NotificationsPopup(){
 
-    console.log(notifications)
     return(
         <div className="notificationsPopupContainer">
             

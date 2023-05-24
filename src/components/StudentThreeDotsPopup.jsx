@@ -6,7 +6,6 @@ export default function StudentThreeDotsPopup({handleResubmit}){
         <div className="studentThreeDotsPopupContainer">
           <ul>
             <li 
-            // onClick={handleResubmit}
             >Re-submit Request</li>
             <li>Cancel Request</li>
           </ul>

@@ -213,6 +213,29 @@ body{
   font-size: 2.7rem;
   margin-bottom: 1.8rem;
 }
+.filterRequestsContainer {
+  margin-top: 4rem;
+  width: 60rem;
+}
+.filterRequestsContainer ul{
+   display: flex;
+   justify-content: space-around;
+   list-style: none;
+   font-size: 1.6rem;
+}
+.filterRequestsContainer li{
+  cursor: pointer;
+}
+
+.greenFilter{
+  font-weight: 700;
+  color: #389764;
+  border-bottom: 3px solid #389764;
+  /* text-decoration-line: underline;
+  text-decoration-color: #389764;
+  text-decoration-thickness: 0.2em; */
+}
+
 .studentDetailsContainer{
  font-size: 1.3rem;
  margin: 0 auto;
@@ -229,7 +252,7 @@ body{
 }
 
 .marginTop{
-   margin-top: 4rem;
+   margin-top: 3rem;
 }
 .studentDetailsList{
    list-style: none;
@@ -252,6 +275,20 @@ body{
 #biggerflex{
   flex-grow: 2;
   /* background: orangered; */
+}
+
+.blueRequestType, .purpleRequestType, .greenRequestType{
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.blueRequestType{
+  color: #168EB4;
+}
+.purpleRequestType{
+  color: #6B1AD3;
+}
+.greenRequestType{
+  color: #99BA3D;
 }
 .downloadButton{
   color: #389764;
@@ -512,6 +549,10 @@ body{
   list-style: none;
   color: #8E8E8E;
   padding: 0.3rem 0;
+}
+.bolderSpan{
+  font-weight: 800;
+  color: #000;
 }
 .remarksGridContainer{
   display: grid;

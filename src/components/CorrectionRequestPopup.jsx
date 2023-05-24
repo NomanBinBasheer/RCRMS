@@ -1,7 +1,4 @@
-import React from "react"
-// import CloseButton from './CloseButton'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBell } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 
 
 

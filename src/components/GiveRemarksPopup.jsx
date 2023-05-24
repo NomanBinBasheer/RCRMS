@@ -1,7 +1,7 @@
 import React from 'react'
 
-
 export default function GiveRemarksPopup({handleRemarksPopup}){
+
     return(
         <section className="giveRemarksPopupContainer">
             <div className="closeButtonContainer">
@@ -13,12 +13,12 @@ export default function GiveRemarksPopup({handleRemarksPopup}){
             </button>
             </div>
          
-
+            
             <h2>Give remarks to the Student Request</h2>
             <ul>
-                <li> Request Type: <span>D.O.B</span></li>
-                <li>Current Data: <span>28 Aug, 1997</span></li>
-                <li>Corrected Data: <span>03 Dec, 2000</span></li>
+                <li> Request Type: <span className='blueRequestType'>Name</span></li>
+                <li>Current Data: <span className='bolderSpan'>28 Aug, 1997</span></li>
+                <li>Corrected Data: <span className='bolderSpan'>03 Dec, 2000</span></li>
             </ul>
             <section className="remarksGridContainer">
                 <div>

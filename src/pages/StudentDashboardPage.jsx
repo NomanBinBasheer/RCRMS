@@ -5,13 +5,9 @@ import UserDetailsBar from "../components/UserDetailsBar"
 import CorrectionRequestPopup from "../components/CorrectionRequestPopup"
 
 
-// import { CurrentUserContext } from '../App';
 
 export default function StudentDashboardPage(){
 
-  // const [changeResquest, setChangeResquest] = useState(false)
-
-  // const {currentUser} = useContext(CurrentUserContext)
 
   const [correctionRequestPopup, setCorrectionRequestPopup] = useState(false)
   const [changerequestType, setChangerequestType] = useState('')
@@ -20,7 +16,6 @@ export default function StudentDashboardPage(){
     setCorrectionRequestPopup(true)
     setChangerequestType(event.target.name)
   }
-  // console.log(correctionRequestPopup)
     return(
         <>
           <LogoutHeader 
