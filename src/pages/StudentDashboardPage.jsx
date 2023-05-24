@@ -3,9 +3,12 @@ import LogoutHeader from '../components/LogoutHeader'
 import StudentDetailsContainer from '../components/StudentDetailsContainer'
 import UserDetailsBar from "../components/UserDetailsBar"
 import CorrectionRequestPopup from "../components/CorrectionRequestPopup"
+
+
 // import { CurrentUserContext } from '../App';
 
 export default function StudentDashboardPage(){
+
   // const [changeResquest, setChangeResquest] = useState(false)
 
   // const {currentUser} = useContext(CurrentUserContext)
@@ -17,7 +20,6 @@ export default function StudentDashboardPage(){
     setCorrectionRequestPopup(true)
     setChangerequestType(event.target.name)
   }
-  console.log(changerequestType)
   // console.log(correctionRequestPopup)
     return(
         <>
@@ -25,10 +27,10 @@ export default function StudentDashboardPage(){
           />
           <UserDetailsBar 
           />
-          <h2 className="changeResquest">Change Requests</h2>
+          <h2 id="changeResquest">Change Requests</h2>
           <StudentDetailsContainer />
 
-          <section className="changeRequestButtonsContainer">
+          {!correctionRequestPopup && <section className="changeRequestButtonsContainer">
             <h3>Add A New Change Request</h3>
             <div>
             <button 
@@ -48,6 +50,7 @@ export default function StudentDashboardPage(){
             </button>
             </div>
           </section>
+          } 
           <CorrectionRequestPopup 
             correctionRequestPopup={correctionRequestPopup}
             changerequestType={changerequestType}

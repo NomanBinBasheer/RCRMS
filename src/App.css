@@ -124,6 +124,10 @@ body{
   color: #05386b;
   margin-right: 2rem;
 }
+
+.notificationsPopupContainer{
+  background: red;
+}
 .blueStudent{
   background: #05386b;
 }
@@ -157,7 +161,7 @@ body{
   font-weight: 500;
 }
 
-.changeResquest{
+#changeResquest{
   text-align: left;
   margin-left: 6rem;
   font-size: 2.7rem;
@@ -177,7 +181,11 @@ body{
  gap: 10px; */
 
 }
-.studentDetailsContainer ul{
+
+.marginTop{
+   margin-top: 4rem;
+}
+.studentDetailsList{
    list-style: none;
    padding: 0;
    margin: 0;
@@ -186,7 +194,7 @@ body{
    border-bottom:  1px solid rgba(142, 142, 142, 0.3);
    /* text-align: center; */
 }
-.studentDetailsContainer ul li{
+.studentDetailsList > li{
   width: 10%;
   /* background: yellow; */
   display: flex;
@@ -218,14 +226,52 @@ body{
 .verticalDots{
   font-size: 1.5rem;
   font-weight: 800;
-  width: 2.2rem;
-  height: 2.3rem;
+  width: 2.3rem;
+  height: 2.35rem;
   border-radius: 50%;
   margin: 0 1rem 0 auto;
+  padding-left: 0.2rem;
   cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  color: #8E8E8E;
   /* background: red; */
 }
+.verticalDots:hover{
+  background: rgba(5, 56, 107, 0.1);
+}
 
+.studentThreeDotsPopupContainer{
+  width: 19rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  position: absolute;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 0.8rem;
+  z-index: 9999;
+  top: 2.8rem;
+  right: 0.5rem;
+  list-style: none;
+  transition: all 1s;
+
+}
+.studentThreeDotsPopupContainer ul{
+  padding: 0;
+}
+.studentThreeDotsPopupContainer li{
+  list-style: none;
+  padding: 1rem 0;
+  transition: all 0.3s;
+  text-indent: 10px;
+  color: #000;
+}
+.studentThreeDotsPopupContainer li:hover{
+  background: rgba(80, 80, 80, 0.1);
+}
 .changeRequestButtonsContainer{
   margin: 4rem auto;
   padding: 1rem;
@@ -374,7 +420,6 @@ body{
 
 .hidden{
   display: none;
-  color: red;
 }
 .redRemarks{
   background: #E4343C;
@@ -395,12 +440,69 @@ body{
   background: #33B5E5;
 }
 
-
-.studentThreeDotsPopupContainer{
-  width: 17rem;
+.giveRemarksPopupContainer{
+  background: #fafafa;
   position: absolute;
-  background: red;
   z-index: 9999;
-  top: 0;
-  right: 0;
+  width: 950px;
+  height: 560px;
+  top: 50%;
+  left: 50%;
+  padding: 1rem;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  box-shadow: 0 1px 10px 3px rgba(133, 133, 133, 0.651);
 }
+.giveRemarksPopupContainer h2{
+  font-size: 2.4rem;
+  text-indent: 2rem;
+}
+.giveRemarksPopupContainer ul{
+  padding-left: 2.2rem;
+ 
+}
+.giveRemarksPopupContainer li{
+  font-size: 1.4rem;
+  list-style: none;
+  color: #8E8E8E;
+  padding: 0.3rem 0;
+}
+.remarksGridContainer{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2.5rem;
+  padding: 2rem;
+}
+.remarksGridContainer h3{
+  font-size: 1.6rem;
+}
+.remarksGridContainer p{
+  font-size: 1.2rem;
+  margin-top: 3rem;
+}
+.remarksGridContainer div{
+  box-sizing: border-box;
+  border-radius: 1rem;
+  height: 163px;
+  padding: 2rem;
+  cursor: pointer;
+  box-shadow: 0 1px 7px 3px rgba(187, 187, 187, 0.349);
+  transition: all 0.3s;
+}
+.remarksGridContainer div:nth-child(1){
+  background: radial-gradient(50% 90% at 115% 93%, rgba(228, 52, 158, 0.3) 0%, rgba(228, 52, 158, 0) 84.38%);
+}
+.remarksGridContainer div:nth-child(2){
+  background: radial-gradient(50% 90% at 115% 93%, rgba(51, 181, 229, 0.3) 0%, rgba(51, 181, 229, 0) 84.38%);
+}
+.remarksGridContainer div:nth-child(3){
+  background: radial-gradient(50% 90% at 115% 93%, rgba(244, 132, 36, 0.4) 0%, rgba(244, 132, 36, 0) 84.38%);
+}
+.remarksGridContainer div:nth-child(4){
+  background: radial-gradient(50% 90% at 115% 93%, rgba(255, 187, 51, 0.5) 0%, rgba(255, 187, 51, 0) 84.38%);
+}
+.remarksGridContainer div:hover{
+  transform: scale(1.01);
+  
+}
+

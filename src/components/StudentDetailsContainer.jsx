@@ -1,33 +1,56 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowDown, faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
-import StudentThreeDotsPopup from "./StudentThreeDotsPopup.jsx";
+import StudentThreeDotsPopup from "./StudentThreeDotsPopup";
+import AdminThreeDotsPopup from "./AdminThreeDotsPopup";
+import GiveRemarksPopup from "./GiveRemarksPopup"
 import {requests} from "../db.js";
+import { CurrentUserContext } from '../App';
+
 
 export default function StudentDetailsContainer(){
-const [threeDotsPopup, setThreeDotsPopup] = useState(false)
 
-const toggleThreeDotsPopup = () =>{
-  setThreeDotsPopup(prevState => !prevState)
+  const {currentUser} = useContext(CurrentUserContext)
+
+// const [threeDotsPopup, setThreeDotsPopup] = useState(false)
+
+const [selectedButtonIndex, setSelectedButtonIndex] = useState(null);
+
+const [remarksPopup, setRemarksPopup] = useState(false) 
+
+// const [currentRemarks, setCurrentRemarks] = useState('')
+
+// const newRemarks =
+
+
+const toggleThreeDotsPopup = (index) =>{
+  // setThreeDotsPopup(prevState => !prevState)
+  setSelectedButtonIndex((prevIndex) => (prevIndex === index ? null : index));
+
 }
 
 
+const handleRemarksClose = () => {
+  setRemarksPopup(!remarksPopup)
+}
 
-  //  const [currentRemarks, setCurrentRemarks] = useState()
+const handleRemarksPopup = () => {
+  setRemarksPopup(!remarksPopup)
+}
 
-    // const styles = {
-    //   requests.forEach(request => (
-    //     // request.remarks === "Missing Challan" ? setCurrentRemarks(request.remarks)
-    //     // : request.remarks === "Re-upload Docs" ? setCurrentRemarks(request.remarks)
-    //     // : request.remarks === "Visit Office" ? setCurrentRemarks(request.remarks)
-    //     // : setCurrentRemarks('none')
-    //   ))
-    // }
+// const handleResubmit = () => {
+//   requests.forEach(i => {
+    
+//   })
+// }
+
+// console.log(requests[0]._id)
+
     
     return(
-        <section className="studentDetailsContainer">
+        <section className={`studentDetailsContainer ${currentUser.isAdmin && "marginTop"}`}>
            <div className="detailsTitles">
-             <ul>
+             <ul className="studentDetailsList">
                 <li>Roll No.</li>
                 <li>Request Type</li>
                 <li id="biggerflex">Name</li>
@@ -36,12 +59,12 @@ const toggleThreeDotsPopup = () =>{
                 <li id="biggerflex">Corrected Data</li>
                 <li>Documents</li>
                 <li id="biggerflex">Remarks</li>
-                {threeDotsPopup && <StudentThreeDotsPopup />}
+                
              </ul>
            </div>
-           {requests.map(request => (
+           {requests.map((request, index)=> (
             <>
-           <ul>
+           <ul className="studentDetailsList">
                 <li>57043-F19</li>
                 <li>{request.requestType}</li>
                 <li id="biggerflex">{request.fromUser.name}</li>
@@ -67,8 +90,18 @@ const toggleThreeDotsPopup = () =>{
                     (request.remarks !== "Accepted" && request.remarks !== "Rejected") && 
                     <div 
                     className="verticalDots"
-                    onClick={toggleThreeDotsPopup}
+                    onClick={() => toggleThreeDotsPopup(index)}
                     > 
+                    {
+                    selectedButtonIndex === index && 
+                    (currentUser.isAdmin ? 
+                    <AdminThreeDotsPopup 
+                    handleRemarksPopup={handleRemarksPopup}
+                    /> 
+                    : <StudentThreeDotsPopup 
+                    handleResubmit={() => handleResubmit(index)}
+                    />)
+                     }
                     <FontAwesomeIcon icon={faEllipsisVertical} /> 
                     </div> 
                    }
@@ -77,7 +110,12 @@ const toggleThreeDotsPopup = () =>{
              
                </>
              ))}
+             {
+             (currentUser.isAdmin && remarksPopup) && 
+             <GiveRemarksPopup 
+             handleRemarksClose={handleRemarksClose}
              
+             />}
         </section>
     )
 }

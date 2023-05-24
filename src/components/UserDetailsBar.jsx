@@ -4,8 +4,8 @@ import { CurrentUserContext } from '../App';
 
 
 export default function UserDetailsBar(){
-  const currentUser = useContext(CurrentUserContext)
-      
+  const {currentUser} = useContext(CurrentUserContext)
+      console.log(currentUser)
     return(
         <>
         <section className={`userDetailsBar ${currentUser.isAdmin ? "greenAdmin" : "blueStudent"}`}>

@@ -35,7 +35,7 @@ export default function App() {
 
     return(
       <>
-      <CurrentUserContext.Provider value={currentUser}>
+      <CurrentUserContext.Provider value={{currentUser, setCurrentUser}}>
        {renderPage()}
        </CurrentUserContext.Provider>
       </>
